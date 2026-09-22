@@ -31,7 +31,14 @@ module EscapeJavaProperties
   # @param allow_invalid_byte_sequence [Boolean]
   # @return [Properties]
   def self.load(path, encoding = 'UTF-8', allow_invalid_byte_sequence = true)
-      parse(File.read(path).encode(encoding, 'binary', allow_invalid_byte_sequence ? {invalid: :replace, undef: :replace} : {} ))
+      # Read as binary and then transcode to the desired encoding. Ruby 4 changed
+      # String#encode signature; use `encode` with keyword options when available.
+      content = File.binread(path)
+      if allow_invalid_byte_sequence
+        parse(content.encode(encoding, invalid: :replace, undef: :replace))
+      else
+        parse(content.encode(encoding))
+      end
   end
 
   # Generates a escape java properties file
