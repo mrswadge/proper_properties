@@ -1,1 +1,0 @@
-require 'proper_properties/generating/generator'

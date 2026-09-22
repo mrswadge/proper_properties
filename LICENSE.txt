@@ -1,5 +1,5 @@
 Copyright (c) 2014 Jonas Thiel (Applies to code available as https://github.com/jnbt/java-properties 1f2c4b008d69d0eae1084b1adfdea814e2b29899)
-Copyright (c) 2014 tnarik (Modifications in https://github.com/tnarik/proper_properties)
+Copyright (c) 2014 tnarik (Modifications in https://github.com/trace-devops/escape_java_propertie)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

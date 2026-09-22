@@ -1,11 +1,11 @@
-module ProperProperties
+module EscapeJavaProperties
   # Simple representation of a properties file content
   # by an extension of a Hash object a la ActiveSupport::HashWithIndifferentAccess, with underlying symbol keys
   class Properties < Hash
 
     # Assigns a new value to the hash:
     #
-    #   hash = ProperProperties::Properties.new
+    #   hash = EscapeJavaProperties::Properties.new
     #   hash[:key] = 'value'
     #
     # This value can be later fetched using either +:key+ or +'key'+.
@@ -15,7 +15,7 @@ module ProperProperties
 
     # Checks the hash for a key matching the argument passed in:
     #
-    #   hash = ProperProperties::Properties.new
+    #   hash = EscapeJavaProperties::Properties.new
     #   hash['key'] = 'value'
     #   hash.key?(:key)  # => true
     #   hash.key?('key') # => true
@@ -26,7 +26,7 @@ module ProperProperties
     # Same as <tt>Hash#fetch</tt> where the key passed as argument can be
     # either a string or a symbol:
     #
-    #   counters = ProperProperties::Properties.new
+    #   counters = EscapeJavaProperties::Properties.new
     #   counters[:foo] = 1
     #
     #   counters.fetch('foo')          # => 1
@@ -39,7 +39,7 @@ module ProperProperties
 
     # Returns an array of the values at the specified indices:
     #
-    #   hash = ProperProperties::Properties.new
+    #   hash = EscapeJavaProperties::Properties.new
     #   hash[:a] = 'x'
     #   hash[:b] = 'y'
     #   hash.values_at('a', 'b') # => ["x", "y"]

@@ -1,4 +1,4 @@
-module ProperProperties
+module EscapeJavaProperties
   module Parsing
     # Module to normalize the content of a properties file
     # 

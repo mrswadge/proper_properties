@@ -1,7 +1,7 @@
 require 'helper'
 
-describe ProperProperties::Encoding::SpecialChars do
-  subject{ ProperProperties::Encoding::SpecialChars }
+describe EscapeJavaProperties::Encoding::SpecialChars do
+  subject{ EscapeJavaProperties::Encoding::SpecialChars }
   let(:raw)    { "this is some \n text \t with special\r chars\f" }
   let(:encoded){ 'this is some \n text \t with special\r chars\f' }
 

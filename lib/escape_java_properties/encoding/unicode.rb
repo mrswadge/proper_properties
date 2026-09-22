@@ -1,7 +1,7 @@
-module ProperProperties
+module EscapeJavaProperties
   module Encoding
     # Module to encode and decode unicode chars
-    # @see ProperProperties::Encoding
+    # @see EscapeJavaProperties::Encoding
     module Unicode
       
       # Marker for encoded unicode chars

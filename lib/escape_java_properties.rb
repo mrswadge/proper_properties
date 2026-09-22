@@ -1,13 +1,13 @@
-require 'proper_properties/version'
-require 'proper_properties/properties'
-require 'proper_properties/encoding'
-require 'proper_properties/parsing'
-require 'proper_properties/generating'
+require 'escape_java_properties/version'
+require 'escape_java_properties/properties'
+require 'escape_java_properties/encoding'
+require 'escape_java_properties/parsing'
+require 'escape_java_properties/generating'
 
-# A module to read and write Proper properties files
-module ProperProperties
+# A module to read and write Escape java properties files
+module EscapeJavaProperties
 
-  # Parses the content of a Proper properties file
+  # Parses the content of a escape javaproperties file
   # @see Parsing::Parser
   # @param text [String]
   # @return [Properties]
@@ -15,7 +15,7 @@ module ProperProperties
     Parsing::Parser.parse(text)
   end
 
-  # Generates the content of a Proper properties file
+  # Generates the content of a escape java properties file
   # @see Generating::Generator
   # @param hash [Hash] 
   # @param options [Hash] options for the generator
@@ -24,7 +24,7 @@ module ProperProperties
     Generating::Generator.generate(hash, options)
   end
 
-  # Loads and parses a Proper properties file
+  # Loads and parses a escape java properties file
   # @see Parsing::Parser
   # @param path [String]
   # @param encoding [String]
@@ -34,7 +34,7 @@ module ProperProperties
       parse(File.read(path).encode(encoding, 'binary', allow_invalid_byte_sequence ? {invalid: :replace, undef: :replace} : {} ))
   end
 
-  # Generates a Proper properties file
+  # Generates a escape java properties file
   # @see Generating::Generator
   # @param hash [Hash]
   # @param path [String]

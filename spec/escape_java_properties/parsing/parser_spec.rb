@@ -1,7 +1,7 @@
 require 'helper'
 
-describe ProperProperties::Parsing::Parser do
-  subject { ProperProperties::Parsing::Parser }
+describe EscapeJavaProperties::Parsing::Parser do
+  subject { EscapeJavaProperties::Parsing::Parser }
 
   let(:as_hash) do
     {

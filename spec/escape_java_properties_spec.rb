@@ -1,8 +1,8 @@
 require 'helper'
 require 'tempfile'
 
-describe ProperProperties do
-  subject{ ProperProperties }
+describe EscapeJavaProperties do
+  subject{ EscapeJavaProperties }
 
   it "parses from string to symbol hash" do
     subject.parse("item1=item1").must_equal({:item1 => "item1"})

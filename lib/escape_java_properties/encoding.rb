@@ -1,8 +1,8 @@
-require 'proper_properties/encoding/special_chars'
-require 'proper_properties/encoding/separators'
-require 'proper_properties/encoding/unicode'
+require 'escape_java_properties/encoding/special_chars'
+require 'escape_java_properties/encoding/separators'
+require 'escape_java_properties/encoding/unicode'
 
-module ProperProperties
+module EscapeJavaProperties
   # Module to encode and decode
   #
   # Usage:

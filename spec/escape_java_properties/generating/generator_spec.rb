@@ -1,8 +1,8 @@
 # coding: utf-8
 require 'helper'
 
-describe ProperProperties::Generating::Generator do
-  subject { ProperProperties::Generating::Generator }
+describe EscapeJavaProperties::Generating::Generator do
+  subject { EscapeJavaProperties::Generating::Generator }
 
   let(:as_hash) do
     {

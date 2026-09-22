@@ -1,5 +1,5 @@
 # coding: utf-8
-module ProperProperties
+module EscapeJavaProperties
   module Parsing
     # This module allows parsing of a properties file content string
     # into a {Properties} object

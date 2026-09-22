@@ -1,8 +1,8 @@
 # coding: utf-8
 require 'helper'
 
-describe ProperProperties::Encoding do
-  subject{ ProperProperties::Encoding }
+describe EscapeJavaProperties::Encoding do
+  subject{ EscapeJavaProperties::Encoding }
 
   describe "full" do
     let(:decoded){ "this is some \n text = with ה" }

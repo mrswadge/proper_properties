@@ -1,7 +1,7 @@
-module ProperProperties
+module EscapeJavaProperties
   module Encoding
     # Module to escape separators as : or =
-    # @see ProperProperties::Encoding
+    # @see EscapeJavaProperties::Encoding
     module Separators
 
       # Marker for all separators

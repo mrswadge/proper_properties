@@ -1,8 +1,8 @@
 # coding: utf-8
 require 'helper'
 
-describe ProperProperties::Encoding::Unicode do
-  subject{ ProperProperties::Encoding::Unicode }
+describe EscapeJavaProperties::Encoding::Unicode do
+  subject{ EscapeJavaProperties::Encoding::Unicode }
 
   let(:encoded) { 'this is some \u0024 text \U05D4 with unicode' }
   let(:encoded_normalized) { 'this is some $ text \u05d4 with unicode' }
