@@ -54,9 +54,6 @@ module EscapeJavaProperties
       # Removes empty lines
       RULES << Rule.new(/^$(\r\n?|\n)/)
 
-      # Unescape double backslashes
-      RULES << Rule.new(/\\\\/, '\\')
-
       # Remove whitespace around delimiters and replace with =
       RULES << Rule.new(/^((?:(?:\\[=: \t])|[^=: \t])+)[ \t]*[=: \t][ \t]*/, '\1=')
 

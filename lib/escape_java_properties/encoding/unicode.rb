@@ -46,13 +46,17 @@ module EscapeJavaProperties
       end
 
       def self.hex(codepoint)
-        hex  = codepoint.to_s(16)
-        size = hex.size
-        # padding the hex value for uneven digest
-        if (size % 2) == 1
-          "0#{hex}"
+        # For BMP codepoints produce a 4-digit hex (\uXXXX).
+        # For supplementary codepoints produce a surrogate pair
+        # encoded as "XXXX\\uYYYY" so callers that prepend
+        # the "\\u" marker produce "\\uXXXX\\uYYYY".
+        if codepoint <= 0xFFFF
+          format('%04x', codepoint)
         else
-          hex
+          cp = codepoint - 0x10000
+          high = 0xD800 + (cp >> 10)
+          low  = 0xDC00 + (cp & 0x3FF)
+          "#{format('%04x', high)}\\u#{format('%04x', low)}"
         end
       end
 
